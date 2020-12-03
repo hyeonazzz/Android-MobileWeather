@@ -81,14 +81,14 @@ public class CreateOrEditNote extends AppCompatActivity {
 
   private AlertDialog deleteDialog(final ReminderItem item) {
     return new AlertDialog.Builder(this)
-        .setTitle("확인")
-        .setMessage("정말 삭제하시나요?")
-        .setPositiveButton("네", new DialogInterface.OnClickListener() {
+        .setTitle("Reminder")
+        .setMessage("삭제된 데이터는 복구할 수 없습니다.")
+        .setPositiveButton("삭제", new DialogInterface.OnClickListener() {
           public void onClick(DialogInterface dialog, int i) {
             deleteNote(item);
           }
         })
-        .setNegativeButton("아니요", new DialogInterface.OnClickListener() {
+        .setNegativeButton("취소", new DialogInterface.OnClickListener() {
 public void onClick(DialogInterface dialog, int i) {
 dialog.dismiss();
 
@@ -100,16 +100,16 @@ dialog.dismiss();
   private AlertDialog saveDialog(final ReminderItem item) {
 
     return new AlertDialog.Builder(this)
-        .setTitle("확인")
-        .setMessage("저장할까요?")
-        .setPositiveButton("네", new DialogInterface.OnClickListener() {
+        .setTitle("Reminder")
+        .setMessage("작성한 내용으로 저장할까요?")
+        .setPositiveButton("저장", new DialogInterface.OnClickListener() {
           public void onClick(DialogInterface dialog, int whichButton) {
             saveNote(item);
             terminateActivity();
             dialog.dismiss();
           }
         })
-        .setNegativeButton("아니요", new DialogInterface.OnClickListener() {
+        .setNegativeButton("취소", new DialogInterface.OnClickListener() {
           public void onClick(DialogInterface dialog, int which) {
             terminateActivity();
             dialog.dismiss();

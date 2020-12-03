@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android Reminder by nkh</string>
+    <string name="app_name">Android Reminder</string>
     <string name="title_hint">제목</string>
     <string name="reminder_hint">내용을 작성해 주세요…</string>
     <string name="delete">삭제</string>

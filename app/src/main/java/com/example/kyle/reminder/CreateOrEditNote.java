@@ -81,14 +81,14 @@ public class CreateOrEditNote extends AppCompatActivity {
 
   private AlertDialog deleteDialog(final ReminderItem item) {
     return new AlertDialog.Builder(this)
-        .setTitle("Confirm")
-        .setMessage("Do you want to delete?")
-        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        .setTitle("확인")
+        .setMessage("정말 삭제하시나요?")
+        .setPositiveButton("네", new DialogInterface.OnClickListener() {
           public void onClick(DialogInterface dialog, int i) {
             deleteNote(item);
           }
         })
-        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+        .setNegativeButton("아니요", new DialogInterface.OnClickListener() {
 public void onClick(DialogInterface dialog, int i) {
 dialog.dismiss();
 
@@ -100,16 +100,16 @@ dialog.dismiss();
   private AlertDialog saveDialog(final ReminderItem item) {
 
     return new AlertDialog.Builder(this)
-        .setTitle("Confirm")
-        .setMessage("Do you want to save?")
-        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        .setTitle("확인")
+        .setMessage("저장할까요?")
+        .setPositiveButton("네", new DialogInterface.OnClickListener() {
           public void onClick(DialogInterface dialog, int whichButton) {
             saveNote(item);
             terminateActivity();
             dialog.dismiss();
           }
         })
-        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+        .setNegativeButton("아니요", new DialogInterface.OnClickListener() {
           public void onClick(DialogInterface dialog, int which) {
             terminateActivity();
             dialog.dismiss();
